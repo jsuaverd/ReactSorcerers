@@ -1,3 +1,4 @@
+// models/user.js
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -24,7 +25,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// Create a model based on the schema
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

@@ -1,7 +1,9 @@
-
+// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const userRoutes = require('./routes/userRoutes');
+const config = require('./config');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://arshkaur10:Mongo2626@webcluster.6spnxy4.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -25,8 +27,11 @@ db.once('open', function () {
 
 // Welcome Route
 app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to optics website' });
+  res.json({ message: 'Welcome to optics website' });
 });
+
+// Use user routes
+app.use('/api', userRoutes);
 
 // Start the server
 app.listen(PORT, () => {
