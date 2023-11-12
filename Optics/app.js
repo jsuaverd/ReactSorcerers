@@ -1,16 +1,35 @@
+
 const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-const  app = express()
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-//db connection
+// Connect to MongoDB
+mongoose.connect('mongodb+srv://arshkaur10:Mongo2626@webcluster.6spnxy4.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-app.listen(3000,() =>{
-    console.log("App Listening to port 3000")
-})
+// Check MongoDB connection
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function () {
+  console.log('Connected to MongoDB');
+});
 
-//routes
-app.get('/users',(req,res)=>{
-    res.json({msg:"Welcome to the Optics Website"})
-})
+// Welcome Route
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to optics website' });
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
