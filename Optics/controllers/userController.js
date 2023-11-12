@@ -28,8 +28,14 @@ const userController = {
   },
 
   createUser: async (req, res) => {
-    const { name, email, password } = req.body;
     try {
+      const { name, email, password } = req.body;
+  
+      // Check if required fields are present
+      if (!name || !email || !password) {
+        return res.status(400).json({ error: 'Name, email, and password are required fields' });
+      }
+  
       const newUser = new User({ name, email, password });
       await newUser.save();
       res.json(newUser);
@@ -38,6 +44,7 @@ const userController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
+  
 
   updateUser: async (req, res) => {
     const { userId } = req.params;
