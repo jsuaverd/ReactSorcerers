@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
+import authRoutes from './routes/authRoutes.js'
 import config from './config.js';
 
 const app = express();
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 
 // Use user routes
 app.use('/api', userRoutes);
+app.use('/api/auth', authRoutes);
 
 // Start the server
 app.listen(PORT, () => {
