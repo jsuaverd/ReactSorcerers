@@ -1,5 +1,5 @@
 // controllers/userController.js
-const User = require('../models/user');
+import User from '../models/user.js';
 
 // Controller for handling CRUD operations
 const userController = {
@@ -30,12 +30,12 @@ const userController = {
   createUser: async (req, res) => {
     try {
       const { name, email, password } = req.body;
-  
+
       // Check if required fields are present
       if (!name || !email || !password) {
         return res.status(400).json({ error: 'Name, email, and password are required fields' });
       }
-  
+
       const newUser = new User({ name, email, password });
       await newUser.save();
       res.json(newUser);
@@ -44,7 +44,6 @@ const userController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
-  
 
   updateUser: async (req, res) => {
     const { userId } = req.params;
@@ -80,4 +79,4 @@ const userController = {
   },
 };
 
-module.exports = userController;
+export default userController;
