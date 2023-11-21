@@ -3,7 +3,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
-import authRoutes from './routes/authRoutes.js'
+import authRoutes from './routes/authRoutes.js';
+import errorHandler from './controllers/errorController.js';
 import config from './config.js';
 
 const app = express();
@@ -35,9 +36,13 @@ app.get('/', (req, res) => {
 app.use('/api', userRoutes);
 app.use('/api/auth', authRoutes);
 
+// Error Handling Middleware
+app.use(errorHandler);
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
 export default app;
+
