@@ -48,6 +48,7 @@ const userController = {
   updateUser: async (req, res) => {
     const { userId } = req.params;
     const { name, email, password } = req.body;
+    console.log("updateds");
     try {
       const user = await User.findByIdAndUpdate(
         userId,
@@ -65,13 +66,16 @@ const userController = {
   },
 
   deleteUser: async (req, res) => {
+    console.log(' deleted func');
     const { userId } = req.params;
     try {
       const user = await User.findByIdAndDelete(userId);
+      console.log(user);
       if (!user) {
         return res.status(404).json({ error: 'User not found' });
       }
       res.json({ message: 'User deleted successfully' });
+      console.log('User deleted successfully');
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
@@ -81,6 +85,7 @@ const userController = {
   // Add the readUser function
   readUser: async (req, res) => {
     const { userId } = req.params;
+   
     try {
       const user = await User.findById(userId);
       if (!user) {
@@ -95,3 +100,4 @@ const userController = {
 };
 
 export default userController;
+
