@@ -1,0 +1,276 @@
+.container1 {
+   
+    text-align: center;
+    color: white;
+    margin: 0px;
+    width: 100%;
+    overflow:hidden;
+  }
+.container1  > img{
+    height: 90vh;
+    width: 100vw;
+}
+  .top-left {
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    
+  }
+
+.button{
+    position: absolute;
+    bottom: 290px;
+    left: 270px; 
+}
+.button1 {
+    background-color: rgb(18, 17, 20); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    width: 150px
+    
+  }
+
+  .button1:hover{
+    background-color: rgb(255, 255, 255); /* Green */
+    color: rgb(18, 17, 17);
+  }
+
+  .about  > img{
+    position: absolute;
+    top: 200px;
+    right: 50px;
+  
+}
+
+.shop > span{
+    font-size: 80px;
+    color:violet
+
+}
+
+.shop {
+    position: absolute;
+    top: 250px;
+    left: 110px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    
+  }
+  .write{
+    position: absolute;
+    width: 620px;
+    bottom: 210px;
+    line-height: 2rem;
+    left: 100px;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+
+  }
+  .button2{
+    position: absolute;
+    bottom: 160px;
+    left: 100px; 
+    background-color: rgb(224, 114, 224); 
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 50px;
+    width: 150px;
+
+  }
+
+  .button2:hover{
+    background-color: rgb(18, 17, 17) ;
+    color: rgb(224, 114, 224);
+   }
+
+   .head{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+
+   }
+
+   .Card-Container{
+    padding: 100px 30px;
+    min-height: 100vh;
+    flex-direction: row;
+    background-color:#c0c4f4;
+    display: flex;
+    flex-wrap:wrap;
+   }
+
+   .Card1{
+    margin: 30px 50px;
+    background-color: white;
+    width:240px;
+    height:250px;
+    border-radius: 15px;
+    flex-grow: 0 0 250px;
+   }
+
+   .price{
+    text-align: center;
+   }
+
+   .Card1 > img{
+
+    margin: 20px ;
+
+   }
+
+   .contact{
+    margin: auto;
+    width: 50%;
+    padding-top: 150px;
+    text-align: center;
+    
+    
+   }
+
+   .form{
+    padding-top: 40px;
+   }
+
+   .form-button{
+    padding-top: 50px;
+
+   
+   }
+   
+   .form-button > button{
+    border-radius: 50px;
+    width: 120px;
+    border-color: #ffffff;
+    background-color:black;
+    color:#ffffff;
+    padding:10px;
+    
+   }
+
+   .form-container > div{
+       padding-top : 30px;
+       
+   }
+   
+ input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  width: 70%;
+  margin: 15px 0;
+  background-color: transparent;
+  
+   }
+
+   .main{
+    background-color: black;
+    width:100%;
+    height: 90vh;
+   }
+
+   .htag{
+    color: #ffffff;
+  
+   }
+
+   .form-button > button, .login-submit, .login-reset, .signup-submit, .signup-reset :hover{
+   
+     background-color:#ffffff ;
+    color: black;
+      
+
+    
+   }
+
+   .container-login, .container-signup{
+    margin: auto;
+    width: 50%;
+    padding-top: 150px;
+    text-align: center;
+    
+   }
+
+   .field{
+    margin: 0 auto;
+   }
+  
+
+   .field > input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  width: 50%;
+  margin: 15px 0;
+  background-color: transparent;
+   }
+
+
+   .page{
+    background-color: black;
+    width:100%;
+    height: 90vh;
+    padding-top:50px;
+   }
+
+   .login-submit, .signup-submit{
+    margin-right: 15px;
+   }
+
+   .buttons{
+
+    padding-top:20px;
+
+   }
+
+   .login-submit, .login-reset, .signup-submit, .signup-reset{
+    border-radius: 50px;
+    width: 120px;
+    border-color: #ffffff;
+    background-color:black;
+    color:#ffffff;
+    padding:10px;
+    
+   }
+
+   .container-login, .container-signup{
+    border:solid 2px;
+    margin-top: 120px;
+    padding: 20px 0px; 
+    max-width: 600px;
+    border-color: aliceblue;
+    
+   
+   }
+
+   .heading1{
+     color:aliceblue;
+   }
+
+   .p{
+
+    color:whitesmoke;
+    padding-top: 20px;
+   }
+
+   
+   
